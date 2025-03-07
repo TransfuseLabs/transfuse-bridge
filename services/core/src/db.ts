@@ -1,7 +1,7 @@
 import { Tx } from "./core";
 
 const sqlite3 = require("sqlite3").verbose();
-const filepath = "./ionize-db.db";
+const filepath = "./transfuse-db.db";
 
 export function createTable() {
   const db = new sqlite3.Database(filepath, (err: any) => {

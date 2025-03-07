@@ -1,5 +1,5 @@
 # validator
-Offical repo for the Ionize asset bridge. Please note that this is a demo version, which currently supports:
+Offical repo for the Transfuse Stellar Multichain asset bridge. Please note that this is a demo version, which currently supports:
 
 - Bi-directional swaps between `Ethereum Sepolia` and `Stellar testnet`
 - Assets that can be swapped:
@@ -16,7 +16,7 @@ Offical repo for the Ionize asset bridge. Please note that this is a demo versio
 
 ### Step 1: Clone the repo
 ```
-git clone git@github.com:ionizedman/validator.git &&
+git clone git@github.com:transfusedman/validator.git &&
 
 cd validator
 ```
@@ -69,12 +69,12 @@ $1 == "ETHEREUM_WS" {
 
 ### Step 4: Run the validator
 ```
-docker compose -p ionize up -d
+docker compose -p transfuse up -d
 ```
 **Note: It takes some time to syc up on both networks. You can monitor progress by accessing your docker container logs.**
 
 
-Once syncing is complete on Stellar and Ethereum networks, You can access the Ionize service via:
+Once syncing is complete on Stellar and Ethereum networks, You can access the transfuse service via:
 
 - REST API endpoints:
     - GET status: `http://localhost:8080/status`

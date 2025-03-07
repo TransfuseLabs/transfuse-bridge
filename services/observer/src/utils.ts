@@ -92,7 +92,7 @@ type ExtractedData = {
 
 export function extractOpsData(ops_data: any[]): ExtractedData | null {
   const manageDataRecord = ops_data.find(
-    (record) => record.type === "manage_data" && record.name === "ionize"
+    (record) => record.type === "manage_data" && record.name === "transfuse"
   );
 
   let pattern: string = !!manageDataRecord
@@ -183,15 +183,15 @@ function base64ToText(base64: string): string | undefined {
 }
 
 function findMemoInEthTxData(input: string) {
-  // Find the index of the substring "IONIZE:"
-  const startIndex = input.indexOf("IONIZE:");
+  // Find the index of the substring "TRANSFUSE:"
+  const startIndex = input.indexOf("TRANSFUSE:");
 
-  // If "IONIZE:" is found, extract the substring starting from the next character
+  // If "TRANSFUSE:" is found, extract the substring starting from the next character
   if (startIndex !== -1) {
-    const extractedSubstring = input.substring(startIndex + 7); // 7 is the length of "IONIZE:"
+    const extractedSubstring = input.substring(startIndex + 7); // 7 is the length of "TRANSFUSE:"
     return extractedSubstring;
   } else {
-    // If "IONIZE:" is not found, return null or handle accordingly
+    // If "TRANSFUSE:" is not found, return null or handle accordingly
     return null;
   }
 }

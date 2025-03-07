@@ -70,10 +70,10 @@ services:
       interval: 30s
       timeout: 10s
       retries: 5    
-  ionize-observer:
-    image: ionizedman/ionize-observer
+  transfuse-observer:
+    image: transfusedman/transfuse-observer
     restart: on-failure
-    container_name: ionize-observer
+    container_name: transfuse-observer
     volumes:
       - observer-data:/app
     depends_on:
@@ -84,10 +84,10 @@ services:
       - rabbitmq
     env_file:
       - .env
-  ionize-core:
-    image: ionizedman/ionize-core
+  transfuse-core:
+    image: transfusedman/transfuse-core
     restart: on-failure
-    container_name: ionize-core
+    container_name: transfuse-core
     ports:
       - "8080:8080"
       - "3000:3000"
